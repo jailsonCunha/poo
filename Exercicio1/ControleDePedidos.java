@@ -4,7 +4,7 @@ import java.util.List;
 public class ControleDePedidos implements InterfaceSistemaDeControle{
 	
 	private List<Pedido> pedidos;
-	
+	private GravadorDePedidos gravar = new GravadorDePedidos();
 	/*public ControleDePedidos(){
 		this.pedidos = new ArrayList<Pedido>();
 	}*/
