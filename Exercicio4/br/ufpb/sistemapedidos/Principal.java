@@ -9,13 +9,15 @@ public class Principal {
 		double valorTotal = 0;
 		Pedido pedido = new Pedido(1);
 		String codigoProduto, quantidade, valor;
-		
+
+		System.out.println("Informe o nome do produto/serviço: ");
 		while (!(codigoProduto = entrada.nextLine()).equals("0")){
 			quantidade = entrada.nextLine();
 			valor = entrada.nextLine();	
 			ItemDePedido itens= new ItemDePedido(codigoProduto, Integer.parseInt(quantidade), Double.parseDouble(valor));
 			pedido.adicionaItem(itens);
 			valorTotal += (Double.parseDouble(valor) * Integer.parseInt(quantidade));
+                        System.out.println("Informe o nome do produto/serviço: ");
 		}
 		System.out.println("Valor total:R$ "+valorTotal);
 			
